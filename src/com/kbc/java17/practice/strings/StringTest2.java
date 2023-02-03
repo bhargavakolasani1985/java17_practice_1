@@ -1,3 +1,5 @@
+package com.kbc.java17.practice.strings;
+
 import java.util.Arrays;
 
 public class StringTest2 {

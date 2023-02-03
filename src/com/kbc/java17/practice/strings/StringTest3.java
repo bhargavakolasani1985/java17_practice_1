@@ -1,3 +1,5 @@
+package com.kbc.java17.practice.strings;
+
 public class StringTest3 {
     public static void main(String[] args) {
         String s1 = """

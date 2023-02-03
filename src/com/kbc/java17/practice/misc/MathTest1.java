@@ -1,3 +1,5 @@
+package com.kbc.java17.practice.misc;
+
 public class MathTest1 {
     public static void main(String[] args) {
         long a = 10;

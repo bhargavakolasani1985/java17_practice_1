@@ -1,3 +1,5 @@
+package com.kbc.java17.practice.strings;
+
 public class StringBuilderTest1 {
     public static void main(String[] args) {
         var letters = new StringBuilder("abcdefg");
