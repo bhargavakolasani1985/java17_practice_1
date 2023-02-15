@@ -1,3 +1,5 @@
+
+package com.kbc.java17.practice.misc;
 public class Super {
 
     static{

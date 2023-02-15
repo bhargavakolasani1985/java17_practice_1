@@ -1,3 +1,4 @@
+package com.kbc.java17.practice.misc;
 public class Employee {
 
     private static final Employee employee = new Employee();

@@ -20,5 +20,6 @@ public class TestClass11 {
             }
         }
         result.stream().distinct().forEach(x -> System.out.println(x));
+        //System.out.println(result);
     }
 }
