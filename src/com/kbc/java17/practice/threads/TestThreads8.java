@@ -14,7 +14,7 @@ public class TestThreads8 {
         counter = 0;
         Runnable task = () -> counter++;
         LongStream.range(0, 500)
-                .forEach(m -> new Thread(task).run());
+                .forEach(m -> new Thread(task).start());
         System.out.println(counter);
     }
 

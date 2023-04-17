@@ -7,6 +7,9 @@ import java.nio.file.Path;
 public class TestIOStreams8 {
     public static void main(String... unused) throws IOException {
         var x = Path.of("C:/tmp/animals/fluffy/..");
+        System.out.println(x);
+        System.out.println(x.toRealPath());
+        System.out.println(x.toRealPath().getParent());
         Files.walk(x.toRealPath().getParent())
                 .forEach(System.out::println);
 

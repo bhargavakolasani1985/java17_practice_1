@@ -10,7 +10,11 @@ public class LocalDateTimeTest2 {
         var zone = ZoneId.of("US/Eastern");
         var dateTime1 = ZonedDateTime.of(date, time, zone);
         var dateTime2 = dateTime1.plus(1, ChronoUnit.HOURS);
+
+        System.out.println(dateTime1);
         System.out.println(dateTime2);
+        System.out.println(dateTime1.getOffset());
+        System.out.println(dateTime2.getOffset());
 
         long diff = ChronoUnit.HOURS.between(dateTime1, dateTime2);
         int hour = dateTime2.getHour();
