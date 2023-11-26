@@ -8,8 +8,10 @@ public class CollectionsTest5 {
         map.put(1, 10);
         map.put(2, 20);
         map.put(3, null);
-        map.merge(1, 3, (a,b) -> a + b);
+        map.put(4, 5);
+        map.merge(1, 3, (a,b) -> b / a);
         map.merge(3, 3, (a,b) -> a + b);
+        map.merge(4, null, (a,b) -> 4);
         System.out.println(map);
     }
 }

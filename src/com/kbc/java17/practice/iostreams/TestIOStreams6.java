@@ -1,19 +1,32 @@
 package com.kbc.java17.practice.iostreams;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class TestIOStreams6 {
+
+    static void displayPaths(Path path){
+        System.out.println("FileName-"+path.getFileName());
+        System.out.println("Parent-"+path.getParent());
+        System.out.println("Root-"+path.getRoot());
+        Path currentParent = path;
+        while((currentParent = currentParent.getParent()) != null){
+            System.out.println("CurrentParent-"+currentParent);
+        }
+    }
+
     public static void main(String... unused) throws IOException {
-        var p1 = Path.of("/tmp/lizard",".").resolve(Path.of("walking.txt"));
-        var p2 = new File("/tmp/lizard/././actions/../walking.txt").toPath();
-        System.out.print(Files.isSameFile(p1,p2));
-        System.out.print(" ");
-        System.out.print(p1.equals(p2));
-        System.out.print(" ");
-        System.out.print(Files.mismatch(p1,p2));
+        Path path1 = Path.of("C:\\Reading\\Java\\Java17");
+        Path path2 = Path.of("Java17");
+        Path path3 = Path.of("./Java17");
+        Path path4 = Path.of("/Reading/Java/Java17");
+        displayPaths(path1);
+        System.out.println("");
+        displayPaths(path2);
+        System.out.println("");
+        displayPaths(path3);
+        System.out.println("");
+        displayPaths(path4);
     }
 
 }

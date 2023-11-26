@@ -8,7 +8,6 @@ public class LocalDateTimeTest8 {
         try {
             LocalDateTime book = LocalDateTime.of(2022, 4, 5, 12, 30, 20);
             System.out.print(book.format(DateTimeFormatter.ofPattern("m")));
-            System.out.print(book.format(DateTimeFormatter.ofPattern("z")));
             System.out.print(DateTimeFormatter.ofPattern("y").format(book));
         } catch (Throwable e) {}
     }

@@ -1,17 +1,14 @@
 package com.kbc.java17.practice.iostreams;
 
 import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class TestIOStreams9 {
     public static void main(String... unused) throws IOException {
-        var x = Path.of("C:/tmp/animals/fluffy/..");
-        Files.walk(x.toRealPath().getParent())
-                .map(p -> p.toAbsolutePath().toString())
-                .filter(s -> s.endsWith(".txt"))
-                .forEach(System.out::println);
-
+        Path path1 = Path.of("C:/Reading/Java/Java17");
+        Path path2 = Path.of("E:/Reading/AWS");
+        System.out.println(path1.relativize(path2));
+        System.out.println(path2.relativize(path1));
     }
 
 }

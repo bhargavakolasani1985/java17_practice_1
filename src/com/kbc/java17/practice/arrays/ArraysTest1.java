@@ -16,5 +16,6 @@ public class ArraysTest1 {
         System.out.println(Arrays.compare(s3, s1));
         System.out.println(Arrays.compare(s3, s4));
         System.out.println(Arrays.compare(s4, s3));
+        System.out.println(Arrays.compare(s4, s4));
     }
 }
